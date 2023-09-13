@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import Popup from './Popup';
