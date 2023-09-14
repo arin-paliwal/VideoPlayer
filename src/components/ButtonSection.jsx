@@ -4,9 +4,9 @@ const ButtonSection = () => {
   const router=useNavigate();
   return (
     <div className="w-full bg-black flex justify-center items-center">
-      <Link to="/video2"><button className="text-black rounded-2xl py-4 px-8 text-xl bg-white" 
+      <Link to="/video2"><button className="text-black rounded-2xl py-5 px-12 text-xl bg-white" 
       >
-        Click Here
+        Intrested for more
       </button></Link>
     </div>
   );

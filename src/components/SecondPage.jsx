@@ -1,13 +1,27 @@
-import React from 'react'
-import VideoPlayer from './VideoPlayer'
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
+import Popup from './Popup';
 
-const SecondPage = () => {
-    const video="https://public-videos-r01.s3.ap-southeast-2.amazonaws.com/Emilyannjackson+2+R5+small.m4v"
+function VideoPlayer({ video }) {
+  const [videoEnded, setVideoEnded] = useState(false);
+
+  const handleVideoEnded = () => {
+    setVideoEnded(true);
+  };
+
+  const handleClosePopup = () => {
+    setVideoEnded(false);
+  };
+
   return (
-    <div>
-        <VideoPlayer video={video}/>
+    <div className='flex justify-center items-center bg-black h-screen'>
+      <video width="1300" height="360" controls>
+        <source src="https://scalerstudios.nyc3.cdn.digitaloceanspaces.com/Emilyannjackson%202%20R5%20small.m4v" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-  )
+  );
 }
 
-export default SecondPage
+export default VideoPlayer;

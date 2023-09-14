@@ -14,18 +14,25 @@ function VideoPlayer({ video }) {
     setVideoEnded(false);
   };
 
+  // return (
+  //   <div className="flex">
+  //     <ReactPlayer
+  //       url={video}
+  //       width="640"
+  //       height="300"
+  //       controls
+  //       onEnded={handleVideoEnded}
+  //     />
+  //     {videoEnded && (
+  //       <Popup onClose={handleClosePopup} />
+  //     )}
+  //   </div>
+  // );
   return (
-    <div className="relative">
-      <ReactPlayer
-        url={video}
-        width="640"
-        height="300"
-        controls
-        onEnded={handleVideoEnded}
-      />
-      {videoEnded && (
-        <Popup onClose={handleClosePopup} />
-      )}
+    <div>
+      <video width="1100" height="360" controls>
+        <source src={video} type="video/mp4" />
+      </video>
     </div>
   );
 }
